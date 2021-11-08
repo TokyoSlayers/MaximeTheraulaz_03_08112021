@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>page test</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <button onclick="clickCounter('y')">test</button>
+        </main>
+        <footer>
+            
+        </footer>
+        <script>
+            function clickCounter(test) {
+              if(typeof(Storage) !== "undefined") {
+                    var productJSON={"name":test,"b":'true'};
+                    productArray=localStorage.getItem('product');
+
+                
+                    if(localStorage.getItem('product')!==null){
+                        productArray.push(productJSON);  
+                        localStorage.setItem('product', productArray);  
+                    }
+                    else{
+                        productArray.push(productJSON);  
+                        localStorage.setItem('product', productArray);  
+                    }
+
+                    Storage.prototype.setItem = function(key, value) {
+                        this.setItem(key, JSON.stringify(value));
+                    }
+
+                    Storage.prototype.getItem = function(key) {
+                        var value = this.getItem(key);
+                        return value && JSON.parse(value);
+                    }
+
+                    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+                }
+            }
+            </script>
+    </body>
+</html>
