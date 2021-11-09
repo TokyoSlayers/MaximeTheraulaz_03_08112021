@@ -1,277 +1,245 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-*{
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-.logo{
-    font-family: 'Shrikhand', cursive;
+.logo {
+  font-family: "Shrikhand", cursive;
 }
 
-.button{
-    height: 2.5rem;
-
-    background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-    border-radius: 25px;
-    border: 0;
-    color: white;
-    width: 180px;
+.button {
+  height: 2.5rem;
+  background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  border-radius: 25px;
+  border: 0;
+  color: white;
+  width: 180px;
 }
 
 /*header*/
-
-header{
-    box-shadow: 0px 0px 15px gray;
-    margin: 0;
+header {
+  box-shadow: 0px 0px 15px gray;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+header a {
+  position: absolute;
+  left: 10px;
 }
-
-header a{
-    position: absolute;
-    left: 10px;
-}
-
-header i{
-    font-size: 25px;
-    color: black;
+header i {
+  font-size: 25px;
+  color: black;
 }
 
 /*footer*/
-footer{
-    background-color: rgb(56, 55, 55);
+footer {
+  background-color: #383737;
 }
-footer h1{
-    font-size: 1.5rem;
+footer h1 {
+  font-size: 1.5rem;
 }
-
-footer h1, footer p{
-    margin: 0;
-    margin-left: 1rem;
-    color: white;
+footer h1, footer p {
+  margin: 0;
+  margin-left: 1rem;
+  color: white;
 }
 
 /*main accueil*/
-#resto,#desc,#list li{
-    background-color: rgb(230, 227, 227);
+#resto, #desc, #list li {
+  background-color: #e6e3e3;
 }
 
-#fonction,.text,#resto h2{
-    margin-left: 1rem;
+#fonction, .text, #resto h2 {
+  margin-left: 1rem;
 }
 
-#resto h2{
-    padding-top: 1rem;
+#resto h2 {
+  padding-top: 1rem;
 }
 
-#des{
-    text-align: center;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
-    height: 200px;
+#des {
+  text-align: center;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 200px;
 }
 
-#list li::before{
-    content: counter(counter);
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    left: calc(-1 * 32px - 10px);
-    line-height: 32px;
-    width: 32px;
-    height: 32px;
-    background: #9356DC;
-    border-radius: 50%;
-    text-align: center;
-    box-shadow: 1px 1px 0 #999;
+.l_style {
+  list-style: none;
 }
 
+#list {
+  counter-reset: counter;
+}
 #list li {
-    counter-increment: counter;
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  counter-increment: counter;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-.l_style{
-    list-style: none;
-}
-
-#list{
-    counter-reset: counter;
-}
-
-#local{
-    display: flex;
-    margin-top: 5px;
-    background-color: rgb(207, 207, 207);
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-}
-#local p{
-    margin: 0px;
-    height: 1rem;
+#list li::before {
+  content: counter(counter);
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: -42px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  background: #9356DC;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
 }
 
-.img{
-    width: 100%;
-    height: 150px;
+#local {
+  display: flex;
+  margin-top: 5px;
+  background-color: #cfcfcf;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+}
+#local p {
+  margin: 0px;
+  height: 1rem;
 }
 
-.a_img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-.a_fig{
-    border-radius: 15px;
-    background-color: white;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    position: relative;
+.img {
+  width: 100%;
+  height: 150px;
 }
 
-.link{
-    position: absolute;
-    width: 92%;
-    height: 255px;
+.a_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
 }
 
-.a_caption{
-    margin-left: 1rem;
-    padding-top: 10px;
-    padding-bottom: 5px;
+.a_fig {
+  border-radius: 15px;
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  position: relative;
 }
 
-.a_caption h3, .a_caption p{
-    margin: 0;
-    margin-bottom: 10px;
+.link {
+  position: absolute;
+  width: 92%;
+  height: 255px;
 }
 
-#a_list{
-    padding: 0;
-    padding-bottom: 2rem;
-    margin-bottom: 0;
+.a_caption {
+  margin-left: 1rem;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.a_caption h3, .a_caption p {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.heart{
-    position: absolute;
-    right: 25px;
+#a_list {
+  padding: 0;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
 }
 
-.a_caption .heart{
-    top: 180px;
+.heart {
+  position: absolute;
+  right: 25px;
 }
 
-.fa-heart{
-    border: 3px;
-    font-size: x-large;
-    opacity: 1;
-    position: relative;
-
-}
-.hover-icon{
-    border: 3px;
-    font-size: x-large;
-    opacity: 0;
-    margin-left: -23px;
-    position: absolute;
-    -webkit-background-clip: text !important;
-    -moz-background-clip: text !important;
-    -webkit-text-fill-color:transparent;
-    background: -webkit-linear-gradient(bottom left, #9356dc,#ff79da );
-    background: -moz-linear-gradient(bottom left, #9356dc, #ff79da);
-    background: linear-gradient(to bottom left, #9356dc,#ff79da );
-}
-
-.fa-heart:hover {
-    cursor: pointer;
-    opacity: 0;
-    overflow: hidden;
-}
-    
-.hover-icon:hover {
-    opacity: 1;
-    cursor: pointer;
+.a_caption .heart {
+  top: 180px;
 }
 
 /*main french*/
-
-#h_font{
-    background-image: url("img/Rouge.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 260px;
+#hf_font {
+  background-image: url("img/Rouge.jpg");
 }
 
-#h_color{
-    background-color: rgb(230, 227, 227);
-    border-radius: 25px 25px 0  0;
-    height: 50px;
-    width: 100%;
-    position: absolute;
-    top: 320px;
+#he_font {
+  background-image: url("img/Charonne.jpg");
 }
 
-#h_color a{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-
-}
-#h_color i{
-    font-size: 25px;
-    color: black;
+#hp_font {
+  background-image: url("img/Folie.jpg");
 }
 
-.menu{
-    background-color: rgb(230, 227, 227);
+#ht_font {
+  background-image: url("img/Menilmontant.jpg");
 }
 
-.menu h2{
-    margin-top: 1rem;
+.h_font {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 260px;
 }
 
-.m_div{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+.h_color {
+  background-color: #e6e3e3;
+  border-radius: 25px 25px 0 0;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 320px;
+}
+.h_color a {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.h_color i {
+  font-size: 25px;
+  color: black;
 }
 
+.menu {
+  background-color: #e6e3e3;
+}
+.menu h3 {
+  font-weight: normal;
+}
+.menu h2 {
+  margin-top: 1rem;
+}
+
+.m_div {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .m_div p {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgb(197, 196, 196);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px #c5c4c4;
+}
+.m_div span {
+  margin-left: 1rem;
 }
 
-.m_div span{
-    margin-left: 1rem;
+.center {
+  display: flex;
+  justify-content: center;
+  height: 8rem;
 }
 
-.center{
-    display: flex;
-    justify-content: center;
-    height: 8rem;
+.deep {
+  font-weight: bold;
 }
 
-.deep{
-    font-weight: bold;
-}
-
-.menu h3{
-    font-weight: normal;
-}
+/*# sourceMappingURL=main.css.map */
