@@ -38,6 +38,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    h1{
+        margin: 0;
+    }
     a{
         position: absolute;
         left: 10px;
@@ -51,23 +54,62 @@ header{
 /*footer*/
 footer{
     background-color: rgb(56, 55, 55);
+    height: 240px;
+
     h1{
-        font-size: 1.5rem;
-    }
-    h1, p{
-        margin: 0;
-        margin-left: 1rem;
         color: white;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0;
     }
-    
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    a{
+        color: white;
+        margin: 0;
+        margin-bottom: .5rem;
+        text-decoration: none;
+    }
+}
+
+/*main contact*/
+#contact{
+    h2{
+        margin-top: 0;
+    }
+
+    .form{
+        padding-top: 1rem;
+        background-color: #f3f0f0;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .text{
+            width: 40%;
+            height: 20px;
+        }
+        .textarea{
+            width: 90%;
+            height: 80px;
+            resize: none;
+        }
+    }
+
 }
 
 /*main accueil*/
 #resto,#desc,#list li{
-    background-color: rgb(230, 227, 227);
+    background-color: #e6e3e366;
 }
 
-#fonction,.text,#resto h2{
+#fonction,.a_text,#resto h2{
     margin-left: 1rem;
 }
 
@@ -92,6 +134,10 @@ footer{
 
 #list{
     counter-reset: counter;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
     li {
         counter-increment: counter;
         margin-top: 1rem;
@@ -102,7 +148,7 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        .text{
+        .a_text{
             width: 180px;
             font-weight: bold;
         }
@@ -137,7 +183,7 @@ footer{
 #local{
     display: flex;
     margin-top: 5px;
-    background-color: rgb(207, 207, 207);
+    background-color: #cfcfcf5e;
     align-items: center;
     justify-content: center;
     height: 2.5rem;
@@ -161,9 +207,10 @@ footer{
 .a_fig{
     border-radius: 15px;
     background-color: white;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
+    width: 95%;
 }
 
 .link{
@@ -183,18 +230,55 @@ footer{
 }
 
 #a_list{
+    display: flex;
+    flex-direction: column;
     padding: 0;
     padding-bottom: 2rem;
     margin-bottom: 0;
 }
 
-.heart{
-    position: absolute;
-    right: 25px;
+.restos{
+    width: 100%;
 }
 
-.a_caption .heart{
-    top: 180px;
+.sp_home{
+    span{
+        top: 180px;
+    }
+}
+
+.sp_other{
+    span{
+        top: 25px;
+    }
+}
+
+.spoiler{
+    i{
+        font-size: 25px;
+    }
+    span{
+        position: absolute;
+        right: 25px;
+    }
+    #hide {
+        visibility: hidden;
+        i{
+            background: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: opacity 1s ease-in-out;
+        }
+    }
+
+    &:hover, &:target{
+        #hide{
+            visibility: visible;
+        }
+        #visible{
+            visibility: hidden;
+        }
+    }
 }
 
 /*main french*/
@@ -219,30 +303,28 @@ footer{
 }
 
 .h_color{
-    background-color: rgb(230, 227, 227);
+    background-color: #f3f0f0;
     border-radius: 25px 25px 0  0;
     height: 50px;
     width: 100%;
     position: absolute;
-    top: 320px;
-    a{
-        position: absolute;
-        top: 30px;
-        right: 30px;
-    }
-    i{
-        font-size: 25px;
-        color: black;
-    }
+    top: 278px;
 }
-
+h2{
+    font-family: 'Shrikhand', cursive;
+    margin-top: 1rem;
+    background-color: #f3f0f0;
+    margin-bottom: 0;
+}
 .menu{
-    background-color: rgb(230, 227, 227);
+    background-color: #f3f0f0;
+    display: flex;
+    flex-direction: column;
+
     h3{
+        width: 10%;
         font-weight: normal;
-    }
-    h2{
-        margin-top: 1rem;
+        box-shadow: 0 3px #99e2d0;
     }
     
 }
@@ -251,12 +333,26 @@ footer{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    p {
+    .text {
         display: flex;
         flex-direction: column;
         background-color: white;
         border-radius: 15px;
         box-shadow: 0px 0px 15px rgb(197, 196, 196);
+        margin-bottom: 1rem;
+
+        .deep,.sold{
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .light{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: 14px;
+        }
+
     }
     span{
         margin-left: 1rem;
@@ -267,8 +363,67 @@ footer{
     display: flex;
     justify-content: center;
     height: 8rem;
+    align-items: center;
+    background-color: #f3f0f0;
+    margin: 0;
 }
 
-.deep{
-    font-weight: bold;
+/*tablette*/
+@media (min-width:760px) and (max-width:1024px){
+    #list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li {
+            width: 380px;
+        }
+    }
+    #a_list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .restos{
+            width: 50%;
+        }
+    }
+    .foot{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .m_div{
+            width: 40%;
+        }
+    }
+}
+
+/*desktop*/
+@media (min-width: 1024px){
+    #list{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #a_list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .restos{
+            width: 30%;
+        }
+    }
+    .foot{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .m_div{
+            width: 30%;
+        }
+    }
 }

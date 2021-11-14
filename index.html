@@ -32,15 +32,15 @@
                 <ol class="l_style" id="list">
                     <li>
                         <i class="mod fas fa-mobile-alt"></i>
-                        <span class="text">Choisissez un restaurant</span>
+                        <span class="a_text">Choisissez un restaurant</span>
                     </li>
                     <li>
                         <i class="mod fas fa-list-ul"></i>
-                        <span class="text">Composez votre menu</span>
+                        <span class="a_text">Composez votre menu</span>
                     </li>
                     <li>
                         <i class="mod fas fa-store"></i>
-                        <span class="text"> Dégustez au restaurant !</span>
+                        <span class="a_text"> Dégustez au restaurant !</span>
                     </li>
                 </ol>
             </section>
@@ -48,7 +48,7 @@
             <section id="resto">
                 <h2>Restaurants</h2>
                 <ul class="l_style" id="a_list">
-                    <li class="scale-up-bottom">
+                    <li class="restos">
                         <figure class="a_fig">
                             <a class="link" href="taste.html"></a>
                             <div class="img">
@@ -57,14 +57,11 @@
                             <figcaption class="a_caption">
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
-                                <p class="heart">
-                                    <i class="far fa-heart default-icon"></i>
-                                    <i class="fas fa-heart hover-icon"></i>
-                                </p>
+                                <span class="spoiler sp_home"><span id="visible"><i class="far fa-heart default-icon"></i></span><span id="hide"><i class="fas fa-heart hover-icon"></i></span></span>
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="scale-up-bottom">
+                    <li class="restos">
                         <figure class="a_fig">
                             <a class="link" href="enchanted.html"></a>
                             <div class="img">
@@ -73,14 +70,12 @@
                             <figcaption class="a_caption">
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
-                                <p class="heart">
-                                    <i class="far fa-heart default-icon"></i>
-                                    <i class="fas fa-heart hover-icon"></i>
-                                </p>
+                                <span class="spoiler sp_home"><span id="visible"><i class="far fa-heart default-icon"></i></span><span id="hide"><i class="fas fa-heart hover-icon"></i></span></span>
+
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="scale-up-bottom">
+                    <li class="restos">
                         <figure class="a_fig">
                             <a class="link" href="french.html"></a>
                             <div class="img">
@@ -89,14 +84,11 @@
                             <figcaption class="a_caption">
                                 <h3>À la française</h3>
                                 <p>Cité Rouge</p>
-                                <p class="heart">
-                                    <i class="far fa-heart default-icon"></i>
-                                    <i class="fas fa-heart hover-icon"></i>
-                                </p>
+                                <span class="spoiler sp_home"><span id="visible"><i class="far fa-heart default-icon"></i></span><span id="hide"><i class="fas fa-heart hover-icon"></i></span></span>
                             </figcaption>
                         </figure>
                     </li>
-                    <li class="scale-up-bottom">
+                    <li class="restos">
                         <figure class="a_fig">
                             <a class="link" href="pleasure.html"></a>
                             <div class="img">
@@ -105,10 +97,7 @@
                             <figcaption class="a_caption">
                                 <h3>Le délice des sense</h3>
                                 <p>Folie-Méricourt</p>
-                                <p class="heart">
-                                    <i class="far fa-heart default-icon"></i>
-                                    <i class="fas fa-heart hover-icon"></i>
-                                </p>
+                                <span class="spoiler sp_home"><span id="visible"><i class="far fa-heart default-icon"></i></span><span id="hide"><i class="fas fa-heart hover-icon"></i></span></span>
                             </figcaption>
                         </figure>
                     </li>
@@ -118,10 +107,12 @@
 
         <footer>
             <h1 class="logo">OhMyFood</h1>
-            <p><i class="fas fa-utensils"></i> Proposer un restaurant</p>
-            <p><i class="fas fa-handshake"></i> Devenir partenaire</p>
-            <p>Mentions Légales</p>
-            <p>Contact</p>
+            <div class="foot">
+                <a><i class="fas fa-utensils"></i> Proposer un restaurant</a>
+                <a><i class="fas fa-handshake"></i> Devenir partenaire</a>
+                <a>Mentions Légales</a>
+                <a href="/contact.php">Contact</a>
+            </div>
         </footer>
     </body>
 </html>
