@@ -340,6 +340,8 @@ h2{
         border-radius: 15px;
         box-shadow: 0px 0px 15px rgb(197, 196, 196);
         margin-bottom: 1rem;
+        -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
         .deep,.sold{
             font-weight: bold;
@@ -352,7 +354,34 @@ h2{
             margin-right: 1rem;
             font-size: 14px;
         }
-
+        .left_button{
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background-color: #99E2D0;
+            border-radius: 0 15px 15px 0;
+            border: 0;
+        }
+        &:hover{
+            .left_button{
+                -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                .valid{
+                    -webkit-animation: rotate-center 0.6s ease-in-out both;
+	                animation: rotate-center 0.6s ease-in-out both;
+                    width: 25px;
+                }
+            }
+            .sold{
+                position: absolute;
+                right: 40px;
+                bottom: 0px;
+                width: 25px;
+                background-color: white;
+            }
+        }
     }
     span{
         margin-left: 1rem;
@@ -368,11 +397,53 @@ h2{
     margin: 0;
 }
 
-.text {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
 
+@-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+              opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 1;
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+              opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 1;
+        }
+  }
+  
  @-webkit-keyframes text-focus-in {
     0% {
         -webkit-filter: blur(12px);
