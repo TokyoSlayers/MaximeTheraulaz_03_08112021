@@ -46,6 +46,9 @@ header i {
   font-size: 25px;
   color: black;
 }
+header .url {
+  display: none;
+}
 
 /*footer*/
 footer {
@@ -97,7 +100,7 @@ footer h1 {
 
 /*main accueil*/
 #resto, #desc, #list li {
-  background-color: #e6e3e366;
+  background-color: #f3f0f0;
 }
 
 #fonction, .a_text, #resto h2 {
@@ -292,6 +295,16 @@ footer h1 {
   top: 278px;
 }
 
+#title {
+  margin: 0;
+  margin-left: -1rem;
+  margin-top: -1rem;
+  background-color: #f3f0f0;
+}
+#title h2 {
+  margin-left: 1rem;
+}
+
 h2 {
   font-family: "Shrikhand", cursive;
   margin-top: 1rem;
@@ -315,6 +328,42 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+.m_div .un {
+  -webkit-animation: 0.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 0.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .deux {
+  -webkit-animation: 1s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 1s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .trois {
+  -webkit-animation: 1.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 1.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .quatre {
+  -webkit-animation: 2s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 2s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .cinq {
+  -webkit-animation: 2.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 2.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .six {
+  -webkit-animation: 2.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 3s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .sept {
+  -webkit-animation: 3s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 3.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .huit {
+  -webkit-animation: 3.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 4s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .neuf {
+  -webkit-animation: 3.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 4.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
 .m_div .text {
   display: flex;
   flex-direction: column;
@@ -322,8 +371,6 @@ h2 {
   border-radius: 15px;
   box-shadow: 0px 0px 15px #c5c4c4;
   margin-bottom: 1rem;
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .m_div .text .deep, .m_div .text .sold {
   font-weight: bold;
@@ -334,7 +381,7 @@ h2 {
   justify-content: space-between;
   margin-left: 1rem;
   margin-right: 1rem;
-  font-size: 14px;
+  font-size: 13px;
 }
 .m_div .text .left_button {
   opacity: 0;
@@ -354,11 +401,13 @@ h2 {
   -webkit-animation: rotate-center 0.6s ease-in-out both;
   animation: rotate-center 0.6s ease-in-out both;
   width: 25px;
+  color: white;
 }
 .m_div .text:hover .sold {
   position: absolute;
   right: 40px;
   bottom: 0px;
+  transition: right 1s;
   width: 25px;
   background-color: white;
 }
@@ -421,10 +470,10 @@ h2 {
 }
 @-webkit-keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
     opacity: 0;
   }
   100% {
@@ -437,10 +486,10 @@ h2 {
 }
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
     opacity: 0;
   }
   100% {
@@ -470,10 +519,17 @@ h2 {
     width: 50%;
   }
 
+  footer {
+    height: 150px;
+  }
+
   .foot {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  .foot a {
+    margin-right: 2rem;
   }
 
   .menu {
@@ -481,11 +537,33 @@ h2 {
     flex-wrap: wrap;
   }
   .menu .m_div {
-    width: 40%;
+    width: 45%;
+  }
+
+  header .url {
+    display: inline-block;
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+  }
+  header .fa-arrow-left {
+    display: none;
   }
 }
 /*desktop*/
 @media (min-width: 1024px) {
+  header .url {
+    display: inline-block;
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+  }
+  header .fa-arrow-left {
+    display: none;
+  }
+
   #list {
     flex-direction: row;
     justify-content: space-evenly;
@@ -500,10 +578,17 @@ h2 {
     width: 30%;
   }
 
+  footer {
+    height: 150px;
+  }
+
   .foot {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  .foot a {
+    margin-right: 2rem;
   }
 
   .menu {
@@ -511,7 +596,7 @@ h2 {
     flex-wrap: wrap;
   }
   .menu .m_div {
-    width: 30%;
+    width: 32%;
   }
 }
 

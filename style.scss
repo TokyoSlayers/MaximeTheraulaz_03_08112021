@@ -49,6 +49,9 @@ header{
         font-size: 25px;
         color: black;
     }
+    .url{
+        display: none;
+    }
 }
 
 /*footer*/
@@ -106,7 +109,7 @@ footer{
 
 /*main accueil*/
 #resto,#desc,#list li{
-    background-color: #e6e3e366;
+    background-color: #f3f0f0;
 }
 
 #fonction,.a_text,#resto h2{
@@ -310,6 +313,16 @@ footer{
     position: absolute;
     top: 278px;
 }
+#title{
+    margin: 0;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    background-color: #f3f0f0;
+    h2{
+        margin-left: 1rem;
+    }
+}
+
 h2{
     font-family: 'Shrikhand', cursive;
     margin-top: 1rem;
@@ -328,11 +341,47 @@ h2{
     }
     
 }
-
+$time : 0.5s;
 .m_div{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    .un{
+        -webkit-animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .deux{
+        -webkit-animation: $time+0.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+0.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .trois{
+        -webkit-animation: $time+1 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+1 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .quatre{
+        -webkit-animation: $time+1.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+1.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .cinq{
+        -webkit-animation: $time+2 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+2 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .six{
+        -webkit-animation: $time+2.25 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+2.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .sept{
+        -webkit-animation: $time+2.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+3 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .huit{
+        -webkit-animation: $time+2.75 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+3.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    .neuf{
+        -webkit-animation: $time+3 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: $time+4 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
     .text {
         display: flex;
         flex-direction: column;
@@ -340,8 +389,6 @@ h2{
         border-radius: 15px;
         box-shadow: 0px 0px 15px rgb(197, 196, 196);
         margin-bottom: 1rem;
-        -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
         .deep,.sold{
             font-weight: bold;
@@ -352,7 +399,7 @@ h2{
             justify-content: space-between;
             margin-left: 1rem;
             margin-right: 1rem;
-            font-size: 14px;
+            font-size: 13px;
         }
         .left_button{
             opacity: 0;
@@ -372,12 +419,15 @@ h2{
                     -webkit-animation: rotate-center 0.6s ease-in-out both;
 	                animation: rotate-center 0.6s ease-in-out both;
                     width: 25px;
+                    color: white;
                 }
             }
+
             .sold{
                 position: absolute;
                 right: 40px;
                 bottom: 0px;
+                transition: right 1s;
                 width: 25px;
                 background-color: white;
             }
@@ -443,17 +493,19 @@ h2{
               opacity: 1;
         }
   }
-  
+
  @-webkit-keyframes text-focus-in {
     0% {
-        -webkit-filter: blur(12px);
-            filter: blur(12px);
+        -webkit-filter: blur(2px);
+            filter: blur(2px);
             
-        -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+        -webkit-transform: translateY(15px);
+            transform: translateY(15px);
       opacity: 0;
     }
+
     100% {
+        
         -webkit-filter: blur(0px);
             filter: blur(0px);
 
@@ -462,15 +514,18 @@ h2{
       opacity: 1;
     }
   }
+
+
   @keyframes text-focus-in {
     0% {
-        -webkit-filter: blur(12px);
-            filter: blur(12px);
-        -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+        -webkit-filter: blur(2px);
+            filter: blur(2px);
+        -webkit-transform: translateY(15px);
+            transform: translateY(15px);
         opacity: 0;
     }
     100% {
+        
         -webkit-filter: blur(0px);
             filter: blur(0px);
         -webkit-transform: translateY(0px);
@@ -478,9 +533,6 @@ h2{
         opacity: 1;
     }
   }
-  
-
-
 
 /*tablette*/
 @media (min-width:760px) and (max-width:1024px){
@@ -499,23 +551,53 @@ h2{
             width: 50%;
         }
     }
+    footer{
+        height: 150px;
+    }
     .foot{
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        a{
+            margin-right: 2rem;
+        }
     }
 
     .menu{
         flex-direction: row;
         flex-wrap: wrap;
         .m_div{
-            width: 40%;
+            width: 45%;
+        }
+    }
+    header{
+        .url{
+            display: inline-block;
+            font-family: 'Shrikhand', cursive;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: black;
+        }
+        .fa-arrow-left{
+            display: none;
         }
     }
 }
 
 /*desktop*/
 @media (min-width: 1024px){
+    header{
+        .url{
+            display: inline-block;
+            font-family: 'Shrikhand', cursive;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: black;
+        }
+        .fa-arrow-left{
+            display: none;
+        }
+    }
     #list{
         flex-direction: row;
         justify-content: space-evenly;
@@ -528,16 +610,23 @@ h2{
             width: 30%;
         }
     }
+    footer{
+        height: 150px;
+    }
     .foot{
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        a{
+            margin-right: 2rem;
+        }
     }
     .menu{
         flex-direction: row;
         flex-wrap: wrap;
         .m_div{
-            width: 30%;
+            width: 32%;
         }
     }
+    
 }
