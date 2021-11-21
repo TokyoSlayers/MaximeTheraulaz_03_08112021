@@ -10,6 +10,8 @@ body{
     margin: 0;
 }
 
+
+
 .logo{
     font-family: 'Shrikhand', cursive;
 }
@@ -446,6 +448,126 @@ $time : 0.5s;
     background-color: #f3f0f0;
     margin: 0;
 }
+
+
+
+.main{
+    animation: unload 8s;
+}
+
+.wrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    opacity: 0;
+    animation: unloadtow 8s;
+
+    .logo{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        rotate: 40deg;
+    }
+    .circle{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: #fcdc29;
+        border-radius: 50%;
+        animation: loading 1.5s cubic-bezier(.8, .5, .2, 1.4) infinite;
+        transform-origin: bottom center;
+        position: relative;
+    }
+    .donut{
+        animation: load 3.5s cubic-bezier(.8,.5,.2,1.4) infinite;
+        position: relative;
+    }
+
+    .donut, .cer{
+        align-items: center;
+        width: 80%;
+    }
+
+    .circle-1{
+        animation-delay: 0.1s;
+      }
+    .circle-2{
+        animation-delay: 0.2s;
+    }
+    .circle-3{
+        animation-delay: 0.3s;
+    }
+    .circle-4{
+        animation-delay: 0.4s;
+    }
+    .circle-5{
+        animation-delay: 0.5s;
+    }
+    .circle-6{
+        animation-delay: 0.6s;
+    }
+    .circle-7{
+        animation-delay: 0.7s;
+    }
+    .circle-8{
+        animation-delay: 0.8s;
+    }
+}
+@keyframes unloadtow {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes unload {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes load {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
+
+
+  @keyframes loading{
+    0%{
+      transform: translateY(-10px);
+      background-color: #fcdc29;
+    }
+    50%{
+      transform: translateY(10px);
+      background-color: #ef584a;
+    }
+    100%{
+      transform: translateY(-10px);
+      background-color: #fcdc29;
+    }
+  }
 
 @-webkit-keyframes rotate-center {
     0% {
