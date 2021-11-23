@@ -328,41 +328,45 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-.m_div .un {
+.m_div .text:nth-child(1) {
+  -webkit-animation: 0.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 0.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .text:nth-child(2) {
   -webkit-animation: 0.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: 0.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-.m_div .deux {
+.m_div .text:nth-child(3) {
+  -webkit-animation: 0.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 0.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .text:nth-child(4) {
   -webkit-animation: 1s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: 1s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-.m_div .trois {
+.m_div .text:nth-child(5) {
+  -webkit-animation: 1.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 1.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .text:nth-child(6) {
   -webkit-animation: 1.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: 1.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-.m_div .quatre {
+.m_div .text:nth-child(7) {
+  -webkit-animation: 1.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 1.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .text:nth-child(8) {
   -webkit-animation: 2s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: 2s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-.m_div .cinq {
+.m_div .text:nth-child(9) {
+  -webkit-animation: 2.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: 2.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.m_div .text:nth-child(10) {
   -webkit-animation: 2.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: 2.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.m_div .six {
-  -webkit-animation: 2.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 3s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.m_div .sept {
-  -webkit-animation: 3s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 3.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.m_div .huit {
-  -webkit-animation: 3.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 4s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.m_div .neuf {
-  -webkit-animation: 3.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 4.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .m_div .text {
   display: flex;
@@ -448,13 +452,11 @@ h2 {
   height: 15px;
   background-color: #fcdc29;
   border-radius: 50%;
-  animation: loading 1.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
+  animation: loading 1.5s;
   transform-origin: bottom center;
-  position: relative;
 }
 .wrapper .donut {
-  animation: load 3.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
-  position: relative;
+  animation: load 3.5s;
 }
 .wrapper .donut, .wrapper .cer {
   align-items: center;
@@ -518,7 +520,7 @@ h2 {
     transform: rotate(0);
   }
   100% {
-    transform: rotate(350deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes loading {
@@ -526,8 +528,16 @@ h2 {
     transform: translateY(-10px);
     background-color: #fcdc29;
   }
+  25% {
+    transform: translateY(-5px);
+    background-color: #fcdc29;
+  }
   50% {
     transform: translateY(10px);
+    background-color: #ef584a;
+  }
+  75% {
+    transform: translateY(5px);
     background-color: #ef584a;
   }
   100% {
@@ -633,6 +643,9 @@ h2 {
   footer {
     height: 150px;
   }
+  footer h1 {
+    text-align: center;
+  }
 
   .foot {
     flex-direction: row;
@@ -691,6 +704,9 @@ h2 {
 
   footer {
     height: 150px;
+  }
+  footer h1 {
+    text-align: center;
   }
 
   .foot {

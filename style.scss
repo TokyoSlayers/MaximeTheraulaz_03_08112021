@@ -10,8 +10,6 @@ body{
     margin: 0;
 }
 
-
-
 .logo{
     font-family: 'Shrikhand', cursive;
 }
@@ -33,7 +31,6 @@ body{
 }
 
 /*header*/
-
 header{
     box-shadow: 0px 0px 15px gray;
     margin: 0;
@@ -343,47 +340,26 @@ h2{
     }
     
 }
-$time : 0.5s;
+
 .m_div{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    .un{
-        -webkit-animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    $time : 0.25s;
+    
+    @for $i from 1 through 10{
+
+        .text{
+            &:nth-child(#{$i}) {
+                -webkit-animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+            }
+        }
+        $time : $time + 0.25s;
     }
-    .deux{
-        -webkit-animation: $time+0.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+0.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    .trois{
-        -webkit-animation: $time+1 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+1 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    .quatre{
-        -webkit-animation: $time+1.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+1.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    .cinq{
-        -webkit-animation: $time+2 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+2 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    .six{
-        -webkit-animation: $time+2.25 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+2.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    .sept{
-        -webkit-animation: $time+2.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+3 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    .huit{
-        -webkit-animation: $time+2.75 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+3.5 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    .neuf{
-        -webkit-animation: $time+3 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: $time+4 text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
+
+
     .text {
         display: flex;
         flex-direction: column;
@@ -449,8 +425,6 @@ $time : 0.5s;
     margin: 0;
 }
 
-
-
 .main{
     animation: unload 8s;
 }
@@ -475,13 +449,11 @@ $time : 0.5s;
         height: 15px;
         background-color: #fcdc29;
         border-radius: 50%;
-        animation: loading 1.5s cubic-bezier(.8, .5, .2, 1.4) infinite;
+        animation: loading 1.5s;
         transform-origin: bottom center;
-        position: relative;
     }
     .donut{
-        animation: load 3.5s cubic-bezier(.8,.5,.2,1.4) infinite;
-        position: relative;
+        animation: load 3.5s;
     }
 
     .donut, .cer{
@@ -549,7 +521,7 @@ $time : 0.5s;
         transform: rotate(0);
     }
     100%{
-        transform: rotate(350deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -559,9 +531,17 @@ $time : 0.5s;
       transform: translateY(-10px);
       background-color: #fcdc29;
     }
+    25%{
+        transform: translateY(-5px);
+        background-color: #fcdc29;
+    }
     50%{
       transform: translateY(10px);
       background-color: #ef584a;
+    }
+    75%{
+        transform: translateY(5px);
+        background-color: #ef584a;
     }
     100%{
       transform: translateY(-10px);
@@ -675,6 +655,9 @@ $time : 0.5s;
     }
     footer{
         height: 150px;
+        h1{
+            text-align: center;
+        }
     }
     .foot{
         flex-direction: row;
@@ -734,6 +717,9 @@ $time : 0.5s;
     }
     footer{
         height: 150px;
+        h1{
+            text-align: center;
+        }
     }
     .foot{
         flex-direction: row;
