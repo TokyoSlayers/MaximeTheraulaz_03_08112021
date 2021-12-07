@@ -329,44 +329,44 @@ h2 {
   margin-right: auto;
 }
 .m_div .text:nth-child(1) {
-  -webkit-animation: 0.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 0.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 2s text-focus-in 1s;
+  animation: 2s text-focus-in 1s;
 }
 .m_div .text:nth-child(2) {
-  -webkit-animation: 0.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 0.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 2.25s text-focus-in 1s;
+  animation: 2.25s text-focus-in 1s;
 }
 .m_div .text:nth-child(3) {
-  -webkit-animation: 0.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 0.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 2.5s text-focus-in 1s;
+  animation: 2.5s text-focus-in 1s;
 }
 .m_div .text:nth-child(4) {
-  -webkit-animation: 1s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 1s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 2.75s text-focus-in 1s;
+  animation: 2.75s text-focus-in 1s;
 }
 .m_div .text:nth-child(5) {
-  -webkit-animation: 1.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 1.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 3s text-focus-in 1s;
+  animation: 3s text-focus-in 1s;
 }
 .m_div .text:nth-child(6) {
-  -webkit-animation: 1.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 1.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 3.25s text-focus-in 1s;
+  animation: 3.25s text-focus-in 1s;
 }
 .m_div .text:nth-child(7) {
-  -webkit-animation: 1.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 1.75s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 3.5s text-focus-in 1s;
+  animation: 3.5s text-focus-in 1s;
 }
 .m_div .text:nth-child(8) {
-  -webkit-animation: 2s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 2s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 3.75s text-focus-in 1s;
+  animation: 3.75s text-focus-in 1s;
 }
 .m_div .text:nth-child(9) {
-  -webkit-animation: 2.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 2.25s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 4s text-focus-in 1s;
+  animation: 4s text-focus-in 1s;
 }
 .m_div .text:nth-child(10) {
-  -webkit-animation: 2.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: 2.5s text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  -webkit-animation: 4.25s text-focus-in 1s;
+  animation: 4.25s text-focus-in 1s;
 }
 .m_div .text {
   display: flex;
@@ -453,7 +453,6 @@ h2 {
   background-color: #fcdc29;
   border-radius: 50%;
   animation: loading 1.5s;
-  transform-origin: bottom center;
 }
 .wrapper .donut {
   animation: load 3.5s;

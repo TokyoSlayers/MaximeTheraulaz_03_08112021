@@ -345,14 +345,14 @@ h2{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    $time : 0.25s;
+    $time : 2s;
     
     @for $i from 1 through 10{
 
         .text{
             &:nth-child(#{$i}) {
-                -webkit-animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-                animation: $time text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                -webkit-animation: $time text-focus-in 1s;
+                animation: $time text-focus-in 1s;
 
             }
         }
@@ -450,7 +450,6 @@ h2{
         background-color: #fcdc29;
         border-radius: 50%;
         animation: loading 1.5s;
-        transform-origin: bottom center;
     }
     .donut{
         animation: load 3.5s;
@@ -516,6 +515,7 @@ h2{
     }
     
 }
+
 @keyframes load {
     0%{
         transform: rotate(0);
@@ -736,5 +736,4 @@ h2{
             width: 32%;
         }
     }
-    
 }
