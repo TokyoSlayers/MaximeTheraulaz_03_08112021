@@ -375,6 +375,7 @@ h2 {
   border-radius: 15px;
   box-shadow: 0px 0px 15px #c5c4c4;
   margin-bottom: 1rem;
+  position: relative;
 }
 .m_div .text .deep, .m_div .text .sold {
   font-weight: bold;
