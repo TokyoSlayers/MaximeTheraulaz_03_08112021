@@ -247,10 +247,10 @@ footer h1 {
   position: absolute;
   right: 25px;
 }
-.spoiler .hide {
+.hide {
   visibility: hidden;
 }
-.spoiler .hide i {
+.hide i {
   background: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
