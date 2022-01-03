@@ -247,16 +247,16 @@ footer h1 {
   position: absolute;
   right: 25px;
 }
-.spoiler #hide {
+.spoiler .hide {
   visibility: hidden;
 }
-.spoiler #hide i {
+.spoiler .hide i {
   background: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: opacity 1s ease-in-out;
 }
-.spoiler:hover #hide, .spoiler:target #hide {
+.spoiler:hover .hide, .spoiler:target .hide {
   visibility: visible;
 }
 .spoiler:hover .visible, .spoiler:target .visible {
