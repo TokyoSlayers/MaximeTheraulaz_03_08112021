@@ -259,7 +259,7 @@ footer h1 {
 .spoiler:hover #hide, .spoiler:target #hide {
   visibility: visible;
 }
-.spoiler:hover #visible, .spoiler:target #visible {
+.spoiler:hover .visible, .spoiler:target .visible {
   visibility: hidden;
 }
 
