@@ -445,7 +445,7 @@ h2 {
   position: absolute;
   top: 30px;
   right: 30px;
-  rotate: 40deg;
+  transform: rotate(45deg);
 }
 .wrapper .circle {
   display: inline-block;
