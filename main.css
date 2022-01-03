@@ -633,7 +633,7 @@ h2 {
 /*tablette*/
 @media (min-width: 760px) and (max-width: 1024px) {
   .m_div .text .texts{
-  width: 92%;
+  width: 94%;
   }
   #list {
     flex-direction: row;
